@@ -17,7 +17,9 @@ function App() {
         <Route path="/login">
           <TemplateClean title="Acesso Restrito" Component={Login} />
         </Route>
-        <TemplateDefault>
+      </Switch>
+      <TemplateDefault>
+        <Switch>
           <Route path="/customers/edit/:id">
             <TemplatePage title="Editar Cliente" Component={CustomersEdit} />
           </Route>
@@ -33,8 +35,8 @@ function App() {
           <Route path="/">
             <TemplatePage title="Página inicial" Component={Home} />
           </Route>
-        </TemplateDefault>
-      </Switch>
+        </Switch>
+      </TemplateDefault>
     </Router>
   );
 }
